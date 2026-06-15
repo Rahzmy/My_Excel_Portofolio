@@ -1,0 +1,63 @@
+# 📊 Sales Performance & Financial Dashboard (2025 - 2026)
+
+[![Excel](https://img.shields.io/badge/Tools-Microsoft_Excel-green?style=flat&logo=microsoftexcel)](https://www.microsoft.com/excel)
+[![Status](https://img.shields.io/badge/Project-Completed-brightgreen)](#)
+
+## 📌 Ringkasan Proyek
+Proyek ini bertujuan untuk menganalisis performa penjualan, profitabilitas, dan tren musiman dari dataset ritel fiktif dengan total +50.000 baris data. Hasil akhir dari proyek ini adalah dashboard interaktif di Excel yang membantu manajemen mengidentifikasi produk dengan margin keuntungan tinggi serta wilayah yang mengalami penurunan penjualan.
+
+---
+
+## 🎯 Fitur & Kemampuan Dashboard
+* **Analisis Dinamis:** Menggunakan *Slicers* dan *Timeline* untuk memfilter data berdasarkan Wilayah, Kategori Produk, dan Kuartal.
+* **Metrik Utama (KPIs):** Menampilkan Total Pendapatan, Total Profit, Profit Margin (%), dan Total Unit Terjual secara *real-time*.
+* **Prediksi Tren:** Analisis tren bulanan untuk melihat pola musiman (*seasonality*) menggunakan kombinasi *Line Chart* dan *Moving Average*.
+
+---
+
+## 🖥️ Tampilan Dashboard
+*(Tampilkan visualisasi terbaik Anda di sini agar perekrut tidak perlu mengunduh file untuk melihat hasil kerja Anda)*
+
+![Dashboard Overview](documentation/screenshots/overview.png)
+*Gambar 1: Tampilan Utama Dashboard Penjualan*
+
+![Deep Dive Analysis](documentation/screenshots/deep_dive.png)
+*Gambar 2: Analisis Detail Profitabilitas Produk menggunakan Diagram Pareto*
+
+---
+
+## 🛠️ Alur Kerja & Metodologi
+
+### 1. Data Cleaning & Transformation (Power Query)
+* Menangani *missing values* dan menghapus data duplikat pada kolom `Order ID`.
+* Mengubah tipe data dan melakukan *pivoting* pada struktur data tanggal.
+* Membuat kolom kustom untuk klasifikasi performa wilayah menggunakan logika `IF` di Power Query.
+
+### 2. Data Modeling & Rumus Utama
+Model data dibangun menggunakan *Power Pivot* (atau gabungan beberapa tabel menggunakan formula). Beberapa fungsi Excel lanjutan yang digunakan meliputi:
+* `XLOOKUP` & `INDEX/MATCH` untuk relasi antar tabel master.
+* `SUMIFS` & `AVERAGEIFS` untuk kalkulasi matriks ringkasan.
+* `GETPIVOTDATA` untuk mengekstrak nilai spesifik dari Pivot Table ke dalam layout KPI dashboard.
+
+### 3. Data Visualization
+* Menggunakan **Kombinasi Grafik** (Bar & Line) untuk membandingkan target vs aktual.
+* Menerapkan **Conditional Formatting** (Data Bars dan Color Scales) untuk mendeteksi anomali stok secara cepat.
+
+---
+
+## 💡 Insight Utama (Key Insights)
+* **Top Performer:** Kategori Elektronik menyumbang **42% dari total pendapatan**, namun memiliki profit margin yang lebih tipis dibandingkan Kategori Fashion.
+* **Anomali Wilayah:** Wilayah Barat mengalami lonjakan penjualan di Q4, tetapi *return rate* (tingkat pengembalian barang) meningkat sebesar 15%, mengindikasikan masalah pada kontrol kualitas pengiriman.
+
+---
+
+## 📂 Cara Menggunakan Repositori Ini
+1. Unduh file dashboard yang ada di folder [`dashboard/`](dashboard/).
+2. Pastikan Anda mengaktifkan fitur **Macros** (jika ada VBA) atau mengizinkan koneksi data jika diminta saat membuka file.
+3. Gunakan *Slicer* di sisi kiri dashboard untuk mulai mengeksplorasi data.
+
+---
+
+## 🔧 Spesifikasi Teknis
+* **Software:** Microsoft Excel 365 / Excel 2021
+* **Fitur yang Digunakan:** Power Query, Power Pivot, Pivot Tables, Slicers, Advanced Formulas.
